@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaHabit | Build Better Habits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-container">
+      <div class="logo">
+        <span>✦</span> NovaHabit
+      </div>
+
+      <button id="themeButton" class="theme-button">☀️</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">PERSONAL GROWTH DASHBOARD</p>
+        <h1>Grow beyond your limits.</h1>
+        <p class="hero-text">
+          Build consistency, track your daily habits, and turn small actions
+          into meaningful progress.
+        </p>
+      </div>
+
+      <div class="hero-badge">
+        <span>🔥</span>
+        <div>
+          <strong id="streakValue">0 days</strong>
+          <small>Current streak</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-grid">
+      <div class="dashboard-card progress-card">
+        <div class="card-heading">
+          <div>
+            <p class="card-label">TODAY'S PROGRESS</p>
+            <h2 id="progressText">0%</h2>
+          </div>
+          <div class="progress-icon">✓</div>
+        </div>
+
+        <div class="progress-track">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+
+        <p id="progressMessage">Start completing your habits today.</p>
+      </div>
+
+      <div class="dashboard-card">
+        <p class="card-label">TOTAL HABITS</p>
+        <h2 id="totalHabits">0</h2>
+        <p class="muted-text">Habits you're tracking</p>
+      </div>
+
+      <div class="dashboard-card">
+        <p class="card-label">COMPLETED TODAY</p>
+        <h2 id="completedHabits">0</h2>
+        <p class="muted-text">Small wins matter</p>
+      </div>
+    </section>
+
+    <section class="main-layout">
+      <div class="dashboard-card habits-card">
+        <div class="section-header">
+          <div>
+            <p class="card-label">YOUR ROUTINE</p>
+            <h2>Daily habits</h2>
+          </div>
+          <span id="habitCount" class="count-badge">0 habits</span>
+        </div>
+
+        <form id="habitForm" class="habit-form">
+          <input
+            id="habitInput"
+            type="text"
+            placeholder="Enter a new habit..."
+            maxlength="60"
+            required
+          >
+
+          <select id="priorityInput">
+            <option value="Low">Low priority</option>
+            <option value="Medium" selected>Medium priority</option>
+            <option value="High">High priority</option>
+          </select>
+
+          <button type="submit">Add habit</button>
+        </form>
+
+        <div class="filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="active">Active</button>
+          <button class="filter-button" data-filter="completed">Completed</button>
+        </div>
+
+        <div id="habitsList" class="habits-list"></div>
+      </div>
+
+      <aside class="dashboard-card insights-card">
+        <p class="card-label">WEEKLY INSIGHT</p>
+        <h2>Consistency beats intensity.</h2>
+        <p>
+          Focus on completing small habits every day. Your progress is built
+          through repetition, not perfection.
+        </p>
+
+        <div class="weekly-chart">
+          <div class="chart-column"><span style="height: 35%"></span><small>M</small></div>
+          <div class="chart-column"><span style="height: 55%"></span><small>T</small></div>
+          <div class="chart-column"><span style="height: 45%"></span><small>W</small></div>
+          <div class="chart-column"><span style="height: 75%"></span><small>T</small></div>
+          <div class="chart-column"><span style="height: 60%"></span><small>F</small></div>
+          <div class="chart-column"><span style="height: 90%"></span><small>S</small></div>
+          <div class="chart-column"><span style="height: 65%"></span><small>S</small></div>
+        </div>
+
+        <div class="quote-box">
+          “Every completed habit is a vote for the person you want to become.”
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    <p>NovaHabit © 2026 · Grow Beyond Limits.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
